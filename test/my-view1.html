@@ -30,17 +30,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </test-fixture>
 
     <script>
-      suite('my-view1 tests', function() {
-        var home;
+      suite('my-view1 tests', () => {
+        let home;
 
-        setup(function() {
+        setup(() => {
           home = fixture('basic');
         });
 
-        test('Number in circle should be 1', function() {
-          var circle = Polymer.dom(home.root).querySelector('.circle');
+        test('Number in circle should be 1', () => {
+          const circle = Polymer.dom(home.root).querySelector('.circle');
           assert.equal(circle.textContent, '1');
-        })
+        });
       });
     </script>
   </body>
